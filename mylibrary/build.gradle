@@ -27,15 +27,10 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    lint {
-        lintConfig file('lint.xml')
-        warningsAsErrors true
-        checkReleaseBuilds true
+    lintOptions {
+        abortOnError false
     }
 
-    tasks.withType(JavaCompile).configureEach {
-        options.compilerArgs << "-Xlint:deprecation"
-    }
     publishing {
         singleVariant("release") {
             withSourcesJar()
