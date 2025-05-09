@@ -3,9 +3,10 @@
 **NadBlurView** is a lightweight and customizable BlurView component for Android that supports RenderEffect (API 31+) and RenderScript fallback for older devices. Designed to be modular, efficient, and easy to integrate into any Android UI.
 
 ![Version](https://img.shields.io/github/v/tag/mj743/NadBlurView?label=version&color=blue)
-![Build](https://img.shields.io/github/actions/workflow/status/mj743/NadBlurView/android.yml?label=build&logo=github)
-![License](https://img.shields.io/github/license/mj743/NadBlurView?label=license&color=lightgrey)
-![Platform](https://img.shields.io/badge/platform-android-brightgreen)
+![Build](https://img.shields.io/github/actions/workflow/status/mj743/NadBlurView/android.yml?label=build&logo=github&style=flat)
+![License](https://img.shields.io/github/license/mj743/NadBlurView?style=flat)
+![Platform](https://img.shields.io/badge/platform-android-brightgreen?style=flat)
+
 
 ---
 
