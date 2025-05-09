@@ -37,7 +37,7 @@ android {
         options.compilerArgs << "-Xlint:deprecation"
     }
     publishing {
-        singleVariant("release") { // ✅ Pastikan hanya release yang dipublikasikan
+        singleVariant("release") {
             withSourcesJar()
             withJavadocJar()
         }
@@ -55,13 +55,13 @@ dependencies {
 }
 publishing {
     publications {
-        create("release", MavenPublication) { // ✅ Perbaikan cara membuat publication
-            afterEvaluate { // ✅ Pastikan komponen tersedia sebelum dieksekusi
-                from components.findByName("release") // ✅ Hindari properti yang belum ada saat evaluasi awal
+        create("release", MavenPublication) { 
+            afterEvaluate {
+                from components.findByName("release")
             }
             groupId = 'com.github.mj743'
             artifactId = 'blurview'
-            version = '1.1.0'
+            version = '1.2.0'
         }
     }
 }
