@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="color_blur_default">#b3eff1f4</color>
+
+    <color name="tsel_awards_light_gray">#eff1f4</color>
+</resources>

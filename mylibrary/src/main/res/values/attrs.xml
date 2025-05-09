@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NadBlur">
+        <attr name="nadBlur_overlayColor" format="color" />
+        <attr name="nadBlur_cornerRadius" format="dimension" />
+        <attr name="nadBlur_topLeftCornerRadius" format="dimension" />
+        <attr name="nadBlur_topRightCornerRadius" format="dimension" />
+        <attr name="nadBlur_bottomLeftCornerRadius" format="dimension" />
+        <attr name="nadBlur_bottomRightCornerRadius" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,67 @@
+plugins {
+    alias(libs.plugins.android.library)
+    id 'maven-publish'
+}
+
+android {
+    namespace 'com.nad.blurview'
+    compileSdk 35
+
+    defaultConfig {
+        minSdk 24
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        buildConfig = true
+    }
+    lint {
+        lintConfig file('lint.xml')
+        warningsAsErrors true
+        checkReleaseBuilds true
+    }
+
+    tasks.withType(JavaCompile).configureEach {
+        options.compilerArgs << "-Xlint:deprecation"
+    }
+    publishing {
+        singleVariant("release") { // ✅ Pastikan hanya release yang dipublikasikan
+            withSourcesJar()
+            withJavadocJar()
+        }
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.activity
+    implementation libs.constraintlayout
+    testImplementation libs.junit
+    androidTestImplementation libs.ext.junit
+    androidTestImplementation libs.espresso.core
+}
+publishing {
+    publications {
+        create("release", MavenPublication) { // ✅ Perbaikan cara membuat publication
+            afterEvaluate { // ✅ Pastikan komponen tersedia sebelum dieksekusi
+                from components.findByName("release") // ✅ Hindari properti yang belum ada saat evaluasi awal
+            }
+            groupId = 'com.github.mj743'
+            artifactId = 'blurview'
+            version = '1.1.0'
+        }
+    }
+}
