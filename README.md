@@ -4,7 +4,7 @@
 
 ![Version](https://img.shields.io/github/v/tag/mj743/NadBlurView?label=version&color=blue)
 ![Build](https://img.shields.io/github/actions/workflow/status/mj743/NadBlurView/android.yml?label=build&logo=github)
-![License](https://img.shields.io/github/license/mj743/NadBlurView)
+![License](https://img.shields.io/github/license/mj743/NadBlurView?label=license&color=lightgrey)
 ![Platform](https://img.shields.io/badge/platform-android-lightgrey)
 
 ---
