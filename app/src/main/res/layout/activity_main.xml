@@ -10,17 +10,6 @@
     tools:context=".MainActivity">
 
 
-    <!-- NadBlurView -->
-    <com.nad.blurview.NadBlurView
-        android:id="@+id/nadBlurView"
-        android:layout_width="0dp"
-        android:layout_height="200dp"
-        android:layout_margin="@dimen/size_20"
-        app:nadBlur_overlayColor="#99FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
     <!-- NadBlurIndicator -->
     <com.nad.blurview.NadBlurIndicator
         android:id="@+id/nadBlurIndicator"

@@ -20,8 +20,6 @@ import com.nad.blurview.config.BlurConfig;
 public class MainActivity extends AppCompatActivity {
 
 
-    private ViewGroup rootView;
-    private NadBlurView nadBlurView;
     private NadBlurViewRounded nadBlurViewRounded;
     private NadBlurIndicator nadBlurIndicator;
     @Override
@@ -42,13 +40,8 @@ public class MainActivity extends AppCompatActivity {
         Drawable windowBackground = decorView.getBackground();
 
 
-        // Inisialisasi komponen blur
-        nadBlurView = findViewById(R.id.nadBlurView);
         nadBlurViewRounded = findViewById(R.id.nadBlurViewRounded);
         nadBlurIndicator = findViewById(R.id.nadBlurIndicator);
-
-        // Attach NadBlurView dan NadBlurViewRounded ke root (wajib sebelum configure)
-        nadBlurView.attachToRoot(rootView);
         nadBlurViewRounded.attachToRoot(rootView);
 
         // Konfigurasi global menggunakan builder
@@ -60,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 .setClipToOutline(true)
                 .setFallbackEnabled(true)
                 .build();
-
-        // Terapkan ke semua komponen
-        nadBlurView.configure(config);
         nadBlurViewRounded.configure(config);
         nadBlurIndicator.configure(config);
 
